@@ -1,0 +1,4 @@
+/vendor/
+.idea
+supervisord.pid
+supervisord.log

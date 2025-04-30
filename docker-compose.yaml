@@ -1,0 +1,13 @@
+services:
+  apache:
+    container_name: movies-recommend-apache
+    build:
+      dockerfile: docker/dockerfile-apache
+    environment:
+      TZ: Europe/Warsaw
+    volumes:
+      - ./:/var/www/movies-recommend.local
+      - ./docker/apache/vhost:/etc/apache2/sites-enabled
+      - ./docker/apache/supervisor:/etc/supervisor
+    ports:
+      - '80:80'
