@@ -15,18 +15,13 @@ readonly class Movie
         return $this->title;
     }
 
-    public function isMultiWordTitle(): bool
+    public function hasMultiWordTitle(): bool
     {
         return str_word_count($this->title) > 1;
     }
 
-    public function isTitleStartsWithWLetterAndHaveEvenLength(): bool
+    public function hasTitleStartsWithWLetterAndHaveEvenLength(): bool
     {
         return str_starts_with($this->title, 'W') && mb_strlen($this->title) % 2 === 0;
-    }
-
-    public function __toString(): string
-    {
-        return $this->title;
     }
 }
