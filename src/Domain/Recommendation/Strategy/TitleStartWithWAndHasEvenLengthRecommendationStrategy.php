@@ -13,11 +13,12 @@ class TitleStartWithWAndHasEvenLengthRecommendationStrategy implements Recommend
      */
     public function recommendMovies(array $movies): array
     {
-        return [
-            new Movie('w-start1'),
-            new Movie('w-start2'),
-            new Movie('w-start3'),
-        ];
+        return array_values(
+            array_filter(
+                $movies,
+                fn(Movie $movie) => $movie->hasTitleStartsWithWLetterAndHaveEvenLength()
+            )
+        );
     }
 
     public function supports(int $strategyId): bool

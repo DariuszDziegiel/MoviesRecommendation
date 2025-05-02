@@ -6,24 +6,23 @@ namespace App\Domain\Recommendation\Strategy;
 
 use App\Domain\Movie\Movie;
 
-class MultiWordMoviesRecommendationStrategy implements RecommendationStrategyInterface
+class MultiWordTitleMoviesRecommendationStrategy implements RecommendationStrategyInterface
 {
     /**
      * @inheritDoc
      */
     public function recommendMovies(array $movies): array
     {
-        return [
-            new Movie('multiword1'),
-            new Movie('multiword2'),
-            new Movie('multiword3'),
-        ];
+        return array_values(
+            array_filter(
+                $movies,
+                fn(Movie $movie) => $movie->hasMultiWordTitle()
+            )
+        );
     }
 
     public function supports(int $strategyId): bool
     {
         return $strategyId == 3;
     }
-
-
 }
