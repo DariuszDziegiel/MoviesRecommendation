@@ -13,7 +13,7 @@ RUN apt install -y supervisor
 
 RUN apt install -y unzip
 RUN apt install -y php8.4-fpm php8.4-cli php8.4-mbstring
-#RUN apt install -y php8.4-bcmath
+RUN apt install -y php8.4-xml
 RUN apt install -y libapache2-mod-fcgid
 
 RUN a2enmod proxy proxy_fcgi proxy_http setenvif
