@@ -1,4 +1,4 @@
-# MoviesRecommendation 1.0.0
+# MoviesRecommendation 1.0.2
 
 Prosta aplikacja rekomendująca filmy na podstawie wybranego algorytmu
 
@@ -7,7 +7,7 @@ Prosta aplikacja rekomendująca filmy na podstawie wybranego algorytmu
 **Sklonuj projekt**
 
 `````
-  git clone https://github.com/DariuszDziegiel/ProductsAPI.git
+  git clone https://github.com/DariuszDziegiel/MoviesRecommendation.git
 `````
 
 **Przejdź do katalogu projektu**
