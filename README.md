@@ -31,7 +31,7 @@ docker compose up -d
 #### Zwrócenie rekomendacji filmów na podstawie algorytmu
 
 ```http
-  GET http://localhost?id=${id}
+  GET http://localhost?id={id}
 ```
 
 | Parametr | Typ       | Description                |
